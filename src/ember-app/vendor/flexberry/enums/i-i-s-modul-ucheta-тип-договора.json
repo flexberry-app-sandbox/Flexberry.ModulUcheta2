@@ -1,0 +1,8 @@
+﻿{
+  "nameSpace": "IIS.ModulUcheta",
+  "className": "ТипДоговора",
+  "enumObjects": {
+    "Краткосрочный": "",
+    "Долгосрочный": ""
+  }
+}

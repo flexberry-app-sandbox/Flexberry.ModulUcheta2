@@ -1,0 +1,222 @@
+﻿{
+  "name": "IISModulUchetaРасчетОстВрем",
+  "modelName": "i-i-s-modul-ucheta-расчет-ост-врем",
+  "className": "РасчетОстВрем",
+  "nameSpace": "IIS.ModulUcheta",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "доступно",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "использовано",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "договор",
+      "relatedTo": "i-i-s-modul-ucheta-договор",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "оказаниеУслуг",
+      "relatedTo": "i-i-s-modul-ucheta-оказание-услуг",
+      "inverse": "расчетОстВрем"
+    }
+  ],
+  "projections": [
+    {
+      "name": "РасчетВремениE",
+      "modelName": "i-i-s-modul-ucheta-расчет-ост-врем",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "использовано",
+          "caption": "Использовано",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "доступно",
+          "caption": "Доступно",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "ОказаниеУслугE",
+          "caption": "Оказание услуг",
+          "name": "оказаниеУслуг",
+          "relatedTo": "i-i-s-modul-ucheta-оказание-услуг",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "РасчетВремениL",
+      "modelName": "i-i-s-modul-ucheta-расчет-ост-врем",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "использовано",
+          "caption": "Использовано",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "доступно",
+          "caption": "Доступно",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "РасчетОстВремE",
+      "modelName": "i-i-s-modul-ucheta-расчет-ост-врем",
+      "attrs": [
+        {
+          "name": "доступно",
+          "caption": "Доступно",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "использовано",
+          "caption": "Использовано",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Номер",
+          "lookupValueField": "номер",
+          "relationName": "Договор",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номер",
+              "caption": "Номер",
+              "hidden": true,
+              "index": 4
+            }
+          ],
+          "index": 3,
+          "type": "standard",
+          "caption": "Договор",
+          "name": "договор",
+          "relatedTo": "i-i-s-modul-ucheta-договор",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "ОказаниеУслугE",
+          "caption": "Оказание услуг",
+          "name": "оказаниеУслуг",
+          "relatedTo": "i-i-s-modul-ucheta-оказание-услуг",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "РасчетОстВремL",
+      "modelName": "i-i-s-modul-ucheta-расчет-ост-врем",
+      "attrs": [
+        {
+          "name": "доступно",
+          "caption": "Доступно",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "использовано",
+          "caption": "Использовано",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Договор",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номер",
+              "caption": "Номер",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Номер",
+          "name": "договор",
+          "relatedTo": "i-i-s-modul-ucheta-договор",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

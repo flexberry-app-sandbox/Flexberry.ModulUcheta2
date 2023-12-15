@@ -1,0 +1,98 @@
+<h3 class="ui header">{{t "forms.i-i-s-modul-ucheta-договор-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.номер
+      class=(if (v-get validationModel "номер" "isInvalid") "error")
+      label=(t "forms.i-i-s-modul-ucheta-договор-e.номер-caption")
+      data-test-i-i-s-modul-ucheta-договор-e-номер=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "номер" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-modul-ucheta-договор-e.дата-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.дата
+      class=(if (v-get validationModel "дата" "isInvalid") "error")
+      data-test-i-i-s-modul-ucheta-договор-e-дата=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "дата" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-modul-ucheta-договор-e-статус="true">
+    <label>{{t "forms.i-i-s-modul-ucheta-договор-e.статус-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-modul-ucheta-статус")
+      value=model.статус
+      class=(if (v-get validationModel "статус" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "статус" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-modul-ucheta-договор-e-тип="true">
+    <label>{{t "forms.i-i-s-modul-ucheta-договор-e.тип-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-modul-ucheta-тип-договора")
+      value=model.тип
+      class=(if (v-get validationModel "тип" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "тип" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.стоимость
+      class=(if (v-get validationModel "стоимость" "isInvalid") "error")
+      label=(t "forms.i-i-s-modul-ucheta-договор-e.стоимость-caption")
+      data-test-i-i-s-modul-ucheta-договор-e-стоимость=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "стоимость" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.длительность
+      class=(if (v-get validationModel "длительность" "isInvalid") "error")
+      label=(t "forms.i-i-s-modul-ucheta-договор-e.длительность-caption")
+      data-test-i-i-s-modul-ucheta-договор-e-длительность=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "длительность" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-modul-ucheta-договор-e-едВремени="true">
+    <label>{{t "forms.i-i-s-modul-ucheta-договор-e.едВремени-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-modul-ucheta-ед-времени")
+      value=model.едВремени
+      class=(if (v-get validationModel "едВремени" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "едВремени" "message")}}
+  </div>
+</form>

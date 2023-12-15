@@ -1,0 +1,10 @@
+﻿{
+  "nameSpace": "IIS.ModulUcheta",
+  "className": "ЕдВремени",
+  "enumObjects": {
+    "Час": "",
+    "Год": "",
+    "Месяц": "",
+    "День": ""
+  }
+}

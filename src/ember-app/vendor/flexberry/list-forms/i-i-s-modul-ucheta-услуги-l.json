@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-modul-ucheta-услуги-e",
+  "editForm": "i-i-s-modul-ucheta-услуги-e",
+  "external": false,
+  "caption": "Услуги",
+  "name": "IISModulUchetaУслугиL",
+  "className": "УслугиL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-modul-ucheta-услуги",
+      "modelProjection": "УслугиL"
+    }
+  ]
+}

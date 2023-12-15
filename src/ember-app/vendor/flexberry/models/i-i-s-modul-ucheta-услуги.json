@@ -1,0 +1,96 @@
+﻿{
+  "name": "IISModulUchetaУслуги",
+  "modelName": "i-i-s-modul-ucheta-услуги",
+  "className": "Услуги",
+  "nameSpace": "IIS.ModulUcheta",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "едВремени",
+      "type": "i-i-s-modul-ucheta-ед-времени",
+      "flexberryType": "ЕдВремени",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "затрВремя",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "наименование",
+      "type": "i-i-s-modul-ucheta-услуга",
+      "flexberryType": "Услуга",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "УслугиE",
+      "modelName": "i-i-s-modul-ucheta-услуги",
+      "attrs": [
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "затрВремя",
+          "caption": "Затраченное время",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "едВремени",
+          "caption": "Единица времени",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "УслугиL",
+      "modelName": "i-i-s-modul-ucheta-услуги",
+      "attrs": [
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "затрВремя",
+          "caption": "Затраченное время",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "едВремени",
+          "caption": "Единица времени",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

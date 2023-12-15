@@ -1,0 +1,66 @@
+﻿{
+  "applicationCaption": "Modul ucheta",
+  "applicationTitle": "Modul ucheta",
+  "items": [
+    {
+      "link": null,
+      "menuName": "справочник",
+      "caption": "Справочник",
+      "title": "Справочник",
+      "children": [
+        {
+          "link": "i-i-s-modul-ucheta-дир-отд-по-раб-с-кл-l",
+          "menuName": null,
+          "caption": "Директор",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-modul-ucheta-клиент-l",
+          "menuName": null,
+          "caption": "Клиент",
+          "title": "",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "договор",
+      "caption": "Договор",
+      "title": "Договор",
+      "children": [
+        {
+          "link": "i-i-s-modul-ucheta-расчет-ост-врем-l",
+          "menuName": null,
+          "caption": "Расчет оставшегося времени",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-modul-ucheta-договор-l",
+          "menuName": null,
+          "caption": "Договор",
+          "title": "",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "прочее",
+      "caption": "Прочее",
+      "title": "Прочее",
+      "children": [
+        {
+          "link": "i-i-s-modul-ucheta-услуги-l",
+          "menuName": null,
+          "caption": "Услуги",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-modul-ucheta-клиент-e",
+  "editForm": "i-i-s-modul-ucheta-клиент-e",
+  "external": false,
+  "caption": "Клиент",
+  "name": "IISModulUchetaКлиентL",
+  "className": "КлиентL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-modul-ucheta-клиент",
+      "modelProjection": "КлиентL"
+    }
+  ]
+}

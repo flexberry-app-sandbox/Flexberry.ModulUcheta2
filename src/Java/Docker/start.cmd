@@ -1,0 +1,1 @@
+docker-compose -p modulucheta-java up -d

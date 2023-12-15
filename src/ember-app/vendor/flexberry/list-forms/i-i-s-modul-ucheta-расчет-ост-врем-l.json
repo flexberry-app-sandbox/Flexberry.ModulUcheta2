@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-modul-ucheta-расчет-ост-врем-e",
+  "editForm": "i-i-s-modul-ucheta-расчет-ост-врем-e",
+  "external": false,
+  "caption": "Расчет ост врем",
+  "name": "IISModulUchetaРасчетОстВремL",
+  "className": "РасчетОстВремL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-modul-ucheta-расчет-ост-врем",
+      "modelProjection": "РасчетОстВремL"
+    }
+  ]
+}

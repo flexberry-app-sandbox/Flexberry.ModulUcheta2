@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Договор",
+  "name": "IISModulUchetaДоговорE",
+  "className": "ДоговорE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-modul-ucheta-договор",
+      "modelProjection": "ДоговорE"
+    }
+  ]
+}

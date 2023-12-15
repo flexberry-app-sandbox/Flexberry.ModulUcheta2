@@ -1,0 +1,90 @@
+<h3 class="ui header">{{t "forms.i-i-s-modul-ucheta-расчет-ост-врем-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.доступно
+      class=(if (v-get validationModel "доступно" "isInvalid") "error")
+      label=(t "forms.i-i-s-modul-ucheta-расчет-ост-врем-e.доступно-caption")
+      data-test-i-i-s-modul-ucheta-расчет-ост-врем-e-доступно=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "доступно" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.использовано
+      class=(if (v-get validationModel "использовано" "isInvalid") "error")
+      label=(t "forms.i-i-s-modul-ucheta-расчет-ост-врем-e.использовано-caption")
+      data-test-i-i-s-modul-ucheta-расчет-ост-врем-e-использовано=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "использовано" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-modul-ucheta-расчет-ост-врем-e.дата-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.дата
+      class=(if (v-get validationModel "дата" "isInvalid") "error")
+      data-test-i-i-s-modul-ucheta-расчет-ост-врем-e-дата=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "дата" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-modul-ucheta-расчет-ост-врем-e.договор-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.договор
+      displayAttributeName="номер"
+      autocomplete=true
+      relationName="договор"
+      projection="ДоговорL"
+      title=(t "forms.i-i-s-modul-ucheta-расчет-ост-врем-e.договор-caption")
+      readonly=readonly
+      componentName="договорLookup"
+      class=(if (v-get validationModel "договор" "isInvalid") "error")
+      data-test-i-i-s-modul-ucheta-расчет-ост-врем-e-договор=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "договор" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-modul-ucheta-расчет-ост-врем-e.оказаниеУслуг-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="оказаниеУслугGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.оказаниеУслуг
+      content=model.оказаниеУслуг
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "оказаниеУслуг" "isInvalid") "error")
+      data-test-i-i-s-modul-ucheta-расчет-ост-врем-e-оказаниеУслуг=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "оказаниеУслуг" "message")}}
+  </div>
+</form>
